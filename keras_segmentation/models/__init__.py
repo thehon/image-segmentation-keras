@@ -45,5 +45,6 @@ model_from_name["vgg_segnet"] = segnet.vgg_segnet
 model_from_name["resnet50_segnet"] = segnet.resnet50_segnet
 model_from_name["mobilenet_segnet"] = segnet.mobilenet_segnet
 
+model_from_name['my_vgg16'] = vgg.get_my_vgg
 
 
