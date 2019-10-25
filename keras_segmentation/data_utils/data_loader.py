@@ -108,7 +108,7 @@ def verify_segmentation_dataset( images_path , segs_path , n_classes ):
 	print("Dataset verified! ")
 
 
-def image_segmentation_generator( images_path , segs_path ,  batch_size,  n_classes , input_height , input_width , output_height , output_width  , do_augment=False ):
+def image_segmentation_generator( images_path , segs_path ,  batch_size,  n_classes , input_height , input_width , output_height , output_width  , do_augment=True ):
 	
 
 	img_seg_pairs = get_pairs_from_paths( images_path , segs_path )
