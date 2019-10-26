@@ -4,6 +4,7 @@ from .data_utils.data_loader import image_segmentation_generator , verify_segmen
 from .models import model_from_name
 import os
 import six
+from keras import optimizers
 
 def find_latest_checkpoint( checkpoints_path ):
 	ep = 0
@@ -60,8 +61,9 @@ def train( model  ,
 		assert not (  val_annotations is None ) 
 
 	if not optimizer_name is None:
+		opt = optimizers.Adam(learning_rate=0.005) 
 		model.compile(loss='categorical_crossentropy',
-			optimizer= optimizer_name ,
+			optimizer= opt ,
 			metrics=['accuracy'])
 
 	if not checkpoints_path is None:
