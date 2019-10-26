@@ -5,6 +5,7 @@ from . import fcn
 from  . import segnet
 from  . import unet
 from  . import pspnet
+from . import vgg
 
 
 
